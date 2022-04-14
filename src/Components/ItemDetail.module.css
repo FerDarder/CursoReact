@@ -1,0 +1,16 @@
+.containerDetail {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.photoDetail{
+    
+    border: 5px solid rgb(224, 224, 224);
+    border-radius: 2%;
+    width: 500px;
+}
+
+.productDetail{
+    width: 100%;
+}
