@@ -1,14 +1,8 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-export default function ItemCount({onAdd,stock,initial}){
-    function onAdd(cant){
-        if(cant>0){
-            alert("Agregaste " + cant + " items al carrito");
-        }
-    }
-    
-    
+export default function ItemCount({stock,initial, onAdd}){
+
     const[cant,setCant] = useState(initial);
 
     function agregar(){
@@ -37,7 +31,7 @@ export default function ItemCount({onAdd,stock,initial}){
             <br />
             
             <div className="d-flex ">
-                <Button variant="dark" onClick={()=> onAdd(cant)}>Comprar</Button>
+                <Button variant="dark" onClick={()=> onAdd()}>Comprar</Button>
             </div>
         </>
     )
