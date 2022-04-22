@@ -22,9 +22,9 @@ export default function NavBar(){
                         <Link to='/category/pantalones' className="d-inline-block navbar-brand text-white">
                             Pantalones
                         </Link>
-                        <li className="d-inline-block navbar-brand text-white">
+                        <Link to='/cart' className="d-inline-block navbar-brand text-white">
                             <CartWidget/>
-                        </li>
+                        </Link>
                     </ul>
                 </div>
                 
