@@ -21,7 +21,7 @@ export default function CartContextProvider({children}) {
   const buyAll = () => setCart([]);
 
   const removeFromCart = (id) => {
-    setCart(cart.filter((plant) => plant.id !== id));
+    setCart(cart.filter((producto) => producto.id !== id));
   }
 
 

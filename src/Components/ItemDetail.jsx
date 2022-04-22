@@ -12,7 +12,6 @@ function ItemDetail({producto}) {
     setBtnIrCarrito(true);
     producto.cant = cant
     addToCart(producto)
-    alert(cant)
   }
 
   return (
