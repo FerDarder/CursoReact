@@ -8,8 +8,9 @@ function ItemDetail({producto}) {
   const [btnIrCarrito, setBtnIrCarrito] = useState(false)
   const {addToCart} = useContext(CartContext)
 
-  const onAdd = () =>{
+  const onAdd = ({cant}) =>{
     setBtnIrCarrito(true);
+    producto.cant = cant
     addToCart(producto)
   }
 

@@ -11,7 +11,7 @@ function Cart() {
     <>
         <h2 className='d-flex justify-content-center'> Carrito
         </h2>
-            {cart.map((item) => <p><h3>{item.id}</h3><h3>{item.name}</h3></p>)}
+            {cart.map((item) => <p><h3>{item.id}</h3><h3>{item.name}</h3> <h3>{item.cant}</h3></p>)}
     </>
   )
 }
