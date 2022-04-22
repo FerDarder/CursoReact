@@ -19,10 +19,17 @@ export default function CartContextProvider({children}) {
     else setCart([...cart, producto]);
   }
 
+  const buyAll = () => setCart([]);
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter((plant) => plant.id !== id));
+  }
+
+
   
   return (
     <>
-        <CartContext.Provider value ={{cart, addToCart}}>
+        <CartContext.Provider value ={{cart, addToCart, buyAll, removeFromCart}}>
             {children}
         </CartContext.Provider>
     </>
