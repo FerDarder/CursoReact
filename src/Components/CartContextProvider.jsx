@@ -10,8 +10,7 @@ export default function CartContextProvider({children}) {
     // setCart([...cart, producto])
     const indexItem = cart.findIndex((cartItem) => cartItem.id === producto.id);
     if (indexItem !== -1) {
-      //Está sumando como el culo, pero por lo menos encuentra bien el id jeje
-      //ahora si anda bien, flasheó en una nomas
+      // cart[indexItem].cant += producto.cant
       const newCart = [...cart];
       newCart[indexItem].cant = cart[indexItem].cant + producto.cant;
       setCart(newCart);

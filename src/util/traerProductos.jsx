@@ -11,7 +11,7 @@ const traerProductos = (categoryId) => {
             }else{
                 resolve(productos);
             }
-        },2000);
+        },500);
     })
 }
 
