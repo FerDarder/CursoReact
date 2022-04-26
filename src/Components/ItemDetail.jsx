@@ -11,8 +11,7 @@ function ItemDetail({producto}) {
 
   const onAdd = ({cant}) =>{
     setBtnIrCarrito(true);
-    producto.cant = cant
-    addToCart(producto)
+    addToCart(producto, cant)
   }
 
   return (
