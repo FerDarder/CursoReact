@@ -6,17 +6,19 @@ export default function CartContextProvider({children}) {
 
   const [cart, setCart] = useState([])
 
-  const addToCart = (producto) => {
-    // setCart([...cart, producto])
+  const addToCart = (producto, cant) => {
     const indexItem = cart.findIndex((cartItem) => cartItem.id === producto.id);
     if (indexItem !== -1) {
-      // cart[indexItem].cant += producto.cant
       const newCart = [...cart];
-      newCart[indexItem].cant = cart[indexItem].cant + producto.cant;
+      newCart[indexItem].cant = cart[indexItem].cant + cant;
       setCart(newCart);
     } 
-    else setCart([...cart, producto]);
+    else {
+      producto.cant=cant
+      setCart([...cart, producto]);
+    }
   }
+
 
   const buyAll = () => setCart([]);
 
