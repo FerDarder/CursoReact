@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import  traerProducto from '../util/traerProducto'
 import { useParams } from 'react-router-dom';
+import {doc, getDoc, getFirestore} from "firebase/firestore"
+
 
 
 function ItemDetailCointainer() {
@@ -11,12 +12,14 @@ function ItemDetailCointainer() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-      traerProducto(id)
-        .then((res) => {
-          setProducto(res);
-        })
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
+      const db = getFirestore();
+      
+      const productoSeleccionado = doc(db, "productos", id)
+      getDoc(productoSeleccionado).then(item =>{
+        setProducto({id: item.id, ...item.data()});
+      })
+      setLoading(false);
+
     },[id]);
 
     if (loading) {
