@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 
-function Cart() {
-  const {cart, buyAll, removeFromCart} = useContext(CartContext)
+function Cart() { 
+  const {cart, removeFromCart} = useContext(CartContext)
   let  total =0;
   cart.forEach(item => {
     total+=item.price*item.cant;
@@ -21,6 +21,7 @@ function Cart() {
           <div className='d-flex justify-content-around'>
             <h3>Producto</h3>
             <h3>Cantidad</h3>
+            <h3>Precio unitario</h3>
             <h3>Imagen</h3>
           </div>
             <br/>
@@ -28,7 +29,7 @@ function Cart() {
                 <div className='d-flex justify-content-around'>
                   <h4>{item.name}</h4>
                   <h4>{item.cant}</h4>               
-                  <h4>${item.price * item.cant}</h4>
+                  <h4>${item.price}</h4>
                   <div>
                     <img src={item.image} style={{ width: '50px' ,height: '100px'}}/> 
                     <Button variant='btn btn-danger' onClick={() => removeFromCart(item.id)}>Eliminar</Button>
@@ -39,7 +40,7 @@ function Cart() {
           <h4 className='d-flex justify-content-center' >Total ${total}</h4>
           <br/>
           <div className="d-flex justify-content-center">
-            <Button variant="dark"  onClick={()=> buyAll()}>Comprar</Button> 
+            <Link to='/form'><Button variant="dark">Comprar</Button></Link> 
           </div>
         </div>
         : <div>

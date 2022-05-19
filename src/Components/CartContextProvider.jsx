@@ -15,7 +15,7 @@ export default function CartContextProvider({children}) {
     } 
     else {
       producto.cant=cant
-      setCart([...cart, producto]);
+      setCart([...cart, producto]); 
     }
   }
 
