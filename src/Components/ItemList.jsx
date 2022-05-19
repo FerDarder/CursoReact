@@ -4,11 +4,6 @@ import Item from './Item'
 
     function ItemList({productos}) {
 return(
-        // productos.map(p => (
-        //     <Item
-        //     producto = {p}
-        //     />
-        //     ))
         <div className="container d-flex justify-content-center align-items-center h-100">
         <div className="row">
             {productos.map((p) => (

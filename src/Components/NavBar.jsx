@@ -11,8 +11,8 @@ const {cart} = useContext(CartContext);
 
     return(
             <>
-            <div className="container-fluid row bg-dark " >
-                <h1><Link to='/' className="bg-dark text-white">Gara-Shop</Link></h1>
+            <div className="container-fluid row bg-primary " >
+                <h1><Link to='/' className="bg-primary text-white">Gara-Shop</Link></h1>
                     <ul className="nav justify-content-center flex-row flex-md-row">
                         <Link to='/category/remeras' className="d-inline-block navbar-brand text-white">
                             Remeras

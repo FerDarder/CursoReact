@@ -3,7 +3,7 @@ import styles from './ItemDetail.module.css';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { CartContext } from './CartContextProvider';
-import { Button } from 'bootstrap';
+import { Button } from 'react-bootstrap';
 
 function ItemDetail({producto}) {
   const [btnIrCarrito, setBtnIrCarrito] = useState(false)
@@ -26,7 +26,7 @@ function ItemDetail({producto}) {
           <h4>{producto.price}</h4>
           <h5>#{producto.category}</h5>
           {
-            btnIrCarrito? <Link to='/cart'> Ir al carrito</Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/> 
+            btnIrCarrito? <Link to='/cart' className='d-flex text-white'><Button variant="primary">Ir al carrito</Button></Link>: <ItemCount  stock={5} initial={1} onAdd={onAdd}/> 
           }
         </div>
         <br/>

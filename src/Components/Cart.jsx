@@ -40,12 +40,12 @@ function Cart() {
           <h4 className='d-flex justify-content-center' >Total ${total}</h4>
           <br/>
           <div className="d-flex justify-content-center">
-            <Link to='/form'><Button variant="dark">Comprar</Button></Link> 
+            <Link to='/form'><Button variant="primary">Comprar</Button></Link> 
           </div>
         </div>
         : <div>
             <h3 className='d-flex justify-content-center ' >Carrito vacío</h3>
-            <Link to='/' className='d-flex justify-content-center text-white'><Button variant="dark">Ir al inicio</Button></Link>
+            <Link to='/' className='d-flex justify-content-center text-white'><Button variant="danger">Ir al inicio</Button></Link>
           </div>}
     </>
   )

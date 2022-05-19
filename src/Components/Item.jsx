@@ -8,17 +8,7 @@ import '../App.css'
 function Item({producto}) {
 
     return (
-        
-        //     <Card className="" style={{ width: '18rem' }}>
-        // <Card.Img variant="top" src={producto.image} />
-        // <Card.Body>
-        //     <Card.Title>{producto.name}</Card.Title>
-        //     <Card.Text>
-        //     {producto.price}
-        //     </Card.Text>
-        //     <Link to = {`/item/${producto.id}`}>Ver detalle</Link>
-        // </Card.Body>
-        // </Card>
+
         <>
         <div className="card text-center bg-dark animate__animated animate__fadeInUp">
         <div className="overflow">
@@ -27,7 +17,7 @@ function Item({producto}) {
         <div className="card-body text-light">
             <h4 className="card-title">{producto.name}</h4>
             <p className="card-text text-secondary">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam deserunt fuga accusantium excepturi quia, voluptates obcaecati nam in voluptas perferendis velit harum dignissimos quasi ex? Tempore repellat quo doloribus magnam."}
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam deserunt fuga accusantium excepturi quia, voluptates obcaecati nam in voluptas perferendis velit harum dignissimos quasi ex? Tempore repellat quo doloribus magnam.
             </p>
                 <Link to = {`/item/${producto.id}`}><a className="btn btn-outline-secondary round-0">Ver detalle</a></Link>
         </div>
